@@ -1,44 +1,12 @@
-import { NextLogo } from "./next-logo";
-import { SupabaseLogo } from "./supabase-logo";
+import Link from 'next/link';
 
-export function Hero() {
-  return (
-    <div className="flex flex-col gap-16 items-center">
-      <div className="flex gap-8 justify-center items-center">
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SupabaseLogo />
-        </a>
-        <span className="border-l rotate-45 h-6" />
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-          <NextLogo />
-        </a>
-      </div>
-      <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
-      <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        The fastest way to build apps with{" "}
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Supabase
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://nextjs.org/"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Next.js
-        </a>
-      </p>
-      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
+export const Hero = () => (
+  <section className="px-6 py-24 text-center max-w-3xl mx-auto">
+    <h1 className="text-5xl md:text-6xl font-serif text-[#111827] mb-6">Ink With History. Art for Today.</h1>
+    <p className="text-lg mb-10 text-gray-700">Welcome to tatooey. We’re Cardiff’s home for custom body art that honors the past while pushing the boundaries of modern design.</p>
+    <div className="flex gap-4 justify-center">
+      <Link href="/gallery" className="px-8 py-3 border-2 border-[#C56A3C] text-[#C56A3C] font-semibold rounded-full hover:bg-[#C56A3C] hover:text-white transition">View Our Art</Link>
+      <Link href="/booking" className="px-8 py-3 bg-[#C56A3C] text-white font-semibold rounded-full hover:opacity-90 transition">Book Consultation</Link>
     </div>
-  );
-}
+  </section>
+);
